@@ -19,7 +19,7 @@ DEFAULT_SEARCH_MARKUP = [
                      InlineKeyboardButton("Go Inline", switch_inline_query="")],
                     [InlineKeyboardButton("Search Anime", switch_inline_query_current_chat="!a "),
                      InlineKeyboardButton("GO Inline", switch_inline_query_current_chat="!a ")],
-                    [InlineKeyboardButton("Developer: @AbirHasan2005", url="https://t.me/AbirHasan2005")]
+                    [InlineKeyboardButton("Deployed: @ProjectNetflixLK", url="https://t.me/ProjectNetflixlK")]
                 ]
 
 
@@ -27,9 +27,9 @@ DEFAULT_SEARCH_MARKUP = [
 async def start_handler(_, message: Message):
     try:
         await message.reply_text(
-            text="Hello, I am Torrent Search Bot!\n"
+            text="Hello, I am NFLK Torrage Bot!\n"
                  "I can search Torrent Magnetic Links from Inline.\n\n"
-                 "Made by @AbirHasan2005",
+                 "Deployed by @ProjectNetflixLK",
             disable_web_page_preview=True,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(DEFAULT_SEARCH_MARKUP)
@@ -98,7 +98,7 @@ async def inline_handlers(_, inline: InlineQuery):
                                              f"**Leechers:** `{torrentList[i]['Leechers']}`\n"
                                              f"**Uploader:** `{torrentList[i]['Uploader']}`\n"
                                              f"**Uploaded on {torrentList[i]['Date']}**\n\n"
-                                             f"**Magnet:**\n`{torrentList[i]['Magnet']}`\n\nPowered By @AHToolsBot",
+                                             f"**Magnet:**\n`{torrentList[i]['Magnet']}`\n\nPowered By @NetflixLK_bot",
                                 parse_mode="Markdown"
                             ),
                             reply_markup=InlineKeyboardMarkup(
