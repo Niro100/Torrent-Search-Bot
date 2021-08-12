@@ -17,9 +17,8 @@ DEFAULT_SEARCH_MARKUP = [
                      InlineKeyboardButton("Go Inline", switch_inline_query="!pb ")],
                     [InlineKeyboardButton("Search 1337x", switch_inline_query_current_chat=""),
                      InlineKeyboardButton("Go Inline", switch_inline_query="")],
-                    [InlineKeyboardButton("Search Anime", switch_inline_query_current_chat="!a "),
                      InlineKeyboardButton("GO Inline", switch_inline_query_current_chat="!a ")],
-                    [InlineKeyboardButton("Developer: @AbirHasan2005", url="https://t.me/AbirHasan2005")]
+                    [InlineKeyboardButton("Owned By: @ProjectNetflixLK", url="https://t.me/ProjectNetflixLK")]
                 ]
 
 
@@ -67,7 +66,7 @@ async def inline_handlers(_, inline: InlineQuery):
                         message_text="`!pb [text]`\n\nSearch ThePirateBay Torrents from Inline!",
                         parse_mode="Markdown"
                     ),
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!pb ")]])
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("නැවත සොයන්න", switch_inline_query_current_chat="!pb ")]])
                 )
             )
         else:
@@ -81,7 +80,7 @@ async def inline_handlers(_, inline: InlineQuery):
                             message_text=f"No Torrents Found For `{query}` in ThePirateBay !!",
                             parse_mode="Markdown"
                         ),
-                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Try Again", switch_inline_query_current_chat="!pb ")]])
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("නැවත උත්සාහ කරන්න", switch_inline_query_current_chat="!pb ")]])
                     )
                 )
             else:
@@ -98,11 +97,11 @@ async def inline_handlers(_, inline: InlineQuery):
                                              f"**Leechers:** `{torrentList[i]['Leechers']}`\n"
                                              f"**Uploader:** `{torrentList[i]['Uploader']}`\n"
                                              f"**Uploaded on {torrentList[i]['Date']}**\n\n"
-                                             f"**Magnet:**\n`{torrentList[i]['Magnet']}`\n\nPowered By @AHToolsBot",
+                                             f"**Magnet:**\n`{torrentList[i]['Magnet']}`\n\nPowered By @ProjectNetflixLK",
                                 parse_mode="Markdown"
                             ),
                             reply_markup=InlineKeyboardMarkup(
-                                [[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!pb ")]])
+                                [[InlineKeyboardButton("නැවත සොයන්න", switch_inline_query_current_chat="!pb ")]])
                         )
                     )
     elif search_ts.startswith("!yts"):
@@ -132,7 +131,7 @@ async def inline_handlers(_, inline: InlineQuery):
                             parse_mode="Markdown"
                         ),
                         reply_markup=InlineKeyboardMarkup(
-                            [[InlineKeyboardButton("Try Again", switch_inline_query_current_chat="!yts ")]])
+                            [[InlineKeyboardButton("නැවත උත්සාහ කරන්න", switch_inline_query_current_chat="!yts ")]])
                     )
                 )
             else:
@@ -150,11 +149,11 @@ async def inline_handlers(_, inline: InlineQuery):
                                              f"**Rating:** `{torrentList[i]['Rating']}`\n"
                                              f"**Duration:** `{torrentList[i]['Runtime']}`\n"
                                              f"**Released on {torrentList[i]['ReleaseDate']}**\n\n"
-                                             f"**Torrent Download Links:**\n{dl_links}\n\nPowered By @AHToolsBot",
+                                             f"**Torrent Download Links:**\n{dl_links}\n\nPowered By @ProjectNetflixLK",
                                 parse_mode="Markdown",
                                 disable_web_page_preview=True
                             ),
-                            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!yts ")]]),
+                            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("නැවත සොයන්න", switch_inline_query_current_chat="!yts ")]]),
                             thumb_url=torrentList[i]["Poster"]
                         )
                     )
@@ -170,7 +169,7 @@ async def inline_handlers(_, inline: InlineQuery):
                         parse_mode="Markdown"
                     ),
                     reply_markup=InlineKeyboardMarkup(
-                        [[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!a ")]])
+                        [[InlineKeyboardButton("නැවත සොයන්න", switch_inline_query_current_chat="!a ")]])
                 )
             )
         else:
@@ -185,7 +184,7 @@ async def inline_handlers(_, inline: InlineQuery):
                             parse_mode="Markdown"
                         ),
                         reply_markup=InlineKeyboardMarkup(
-                            [[InlineKeyboardButton("Try Again", switch_inline_query_current_chat="!a ")]])
+                            [[InlineKeyboardButton("නැවත සොයන්න", switch_inline_query_current_chat="!a ")]])
                     )
                 )
             else:
@@ -201,11 +200,11 @@ async def inline_handlers(_, inline: InlineQuery):
                                              f"**Leechers:** `{torrentList[i]['Leecher']}`\n"
                                              f"**Size:** `{torrentList[i]['Size']}`\n"
                                              f"**Upload Date:** `{torrentList[i]['Date']}`\n\n"
-                                             f"**Magnet:** \n`{torrentList[i]['Magnet']}`\n\nPowered By @AHToolsBot",
+                                             f"**Magnet:** \n`{torrentList[i]['Magnet']}`\n\nPowered By @ProjectNetflixLK",
                                 parse_mode="Markdown"
                             ),
                             reply_markup=InlineKeyboardMarkup(
-                                [[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!a ")]]
+                                [[InlineKeyboardButton("නැවත සොයන්න", switch_inline_query_current_chat="!a ")]]
                             )
                         )
                     )
@@ -245,7 +244,7 @@ async def inline_handlers(_, inline: InlineQuery):
                             parse_mode="Markdown"
                         ),
                         reply_markup=InlineKeyboardMarkup(
-                            [[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="")]]
+                            [[InlineKeyboardButton("නැවත සොයන්න", switch_inline_query_current_chat="")]]
                         ),
                         thumb_url=torrentList[i]['Poster']
                     )
